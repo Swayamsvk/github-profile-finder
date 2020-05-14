@@ -1,11 +1,12 @@
 import React from 'react';
+import { List } from '@material-ui/core';
 
-import "./Background.css"
 
 const Background = props => (
   
     <div className="Background">
     <div>
+          <List style={styles.background}>
          {props.login&&<p>Git-name: {props.login}</p>}
          <p><img src={props.avatar_url}alt=""/></p>
          {props.login&&<p>Git-account: {props.html_url}</p>}
@@ -17,6 +18,7 @@ const Background = props => (
          {props.login&&<p>Following: {props.following}</p>}
          {props.login&&<p>Creation Date: {props.created_at}</p>}
          {props.login&&<p>Updation Date: {props.updated_at}</p>}
+         </List>
     </div>
    </div>
   
@@ -45,6 +47,12 @@ const Background = props => (
 //     );
 //    }
 //   }
+
+const styles = {
+      background:{
+            color:"blue"
+      }
+}
   
   export default Background;
   
